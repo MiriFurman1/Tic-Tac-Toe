@@ -44,8 +44,8 @@ body{
 }
 .box{
     background-color:rgb(172, 203, 156);
-    width:170px;
-    height: 170px;
+    width:120px;
+    height: 120px;
     border: 1px black solid;
     position: relative;
     opacity: 0.9;
@@ -76,6 +76,8 @@ footer{
     text-align: center;
     background-color: rgb(37, 60, 37);
     opacity: 0.95;
+    width: 15vw;
+    margin-left: 7vw;
 }
 
 .btn:hover{
@@ -86,10 +88,10 @@ footer{
 }
 
 .player{
-    width: 10vw;
+    width: 15vw;
     padding: 15px;
     text-align: center; 
-    height:12vh;
+    height:17vh;
     border:1px white solid;
     background-color: rgb(37, 60, 37)
 
@@ -107,6 +109,16 @@ footer{
 
 .winner{
     text-align: center;
+    padding: 3vh;
 }
 
 
+#player1 img{
+    width:50px;
+    height:50px;
+}
+
+#player2 img{
+    width:50px;
+    height:50px;
+}

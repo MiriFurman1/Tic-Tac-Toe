@@ -1,0 +1,38 @@
+@media(max-width:500px){
+.btn{
+    width:30vw;
+    margin-left: 20vw;
+}
+.box{
+    width:100px;
+    height: 100px;
+}
+.player{
+    width:35vw;
+    height:20vh;
+}
+body{
+    height: 100%;
+}
+
+footer{
+    margin-top:10vh;
+}
+}
+
+@media(max-width:750px){
+    .player{
+        width:30vw;
+        height:20vh;
+    }
+    .btn{
+        width:30vw;
+        margin-left: 15vw;
+    }
+
+}
+@media(max-height:700px){
+    footer{
+        margin-top: 0;
+    }
+}
