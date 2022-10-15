@@ -9,14 +9,16 @@ let flag=false
 
 
 const scoreChanger=(winner)=>{
-    let score=document.querySelector(".score"+winner).innerText
-    score=parseInt(score)
-    document.querySelector(".score"+winner).innerHTML=score+1
-    document.querySelector(".winner").innerHTML=`Player ${winner} wins`
+    let score=document.querySelector(".score"+winner).innerText //!takes the score class and adds 1 or 2 to accesses the winning player
+    score=parseInt(score) 
+    document.querySelector(".score"+winner).innerHTML=score+1 //!add 1 to the number of wins for the winning player
+    document.querySelector(".winner").innerHTML=`Player ${winner} wins` //!print who won
 }
 const gameFunc=()=>{
     //! when the game ends
     //! if there is a 3 in a row
+    //! describes all the cases that someone can win and calls the function that updates the number of wins with the winning player
+    //! if player 1 wins, the function is called with 1, if player 2 wins it is called with 2
     if(arrClicked[0]==arrClicked[1]&&arrClicked[1]==arrClicked[2]&&arrClicked[0]!=0){ //!1+2+3
         if(arrClicked[0]==1){
             scoreChanger(1)
@@ -107,25 +109,24 @@ const gameFunc=()=>{
 }
 
 const clickAndPick=()=>{
-//! function that counts all the clicks on boxes(!) 
-
+//! function that counts all the clicks on boxes 
+//!this function will work as long as flag is false.
+//! when someone won the game, flag will be true and no more boxes can be clicked
 for(let i=0;i<boxes.length;i++){
     let element=boxes[i]
     element.addEventListener("click",function(){
-            if(!flag){
+            if(!flag){ 
             if(arrClicked[element.id-1]==0){ //!if box is not clicked
                     //! element.id-1 gives us the box id minus 1 because arr starts with 0
                     clickCounter++
-                    console.log(clickCounter)
                     if(clickCounter%2==0){ //! if player 2 plays
                         arrClicked[element.id-1]=2
-                        o[element.id-1].style.visibility="visible";
+                        o[element.id-1].style.visibility="visible"; //!make the image of player 2 visible
                     }
                     else{
                         arrClicked[element.id-1]=1 //!if player 1 plays
-                        x[element.id-1].style.visibility="visible";
+                        x[element.id-1].style.visibility="visible"; //!make the image of player 1 visible
                     }
-                    console.log(arrClicked)
                     gameFunc()
                     }
                 
@@ -133,8 +134,6 @@ for(let i=0;i<boxes.length;i++){
             })
     }
 }
-
-    
 
 clickAndPick()
 
@@ -148,7 +147,7 @@ for(let j=0; j<boxes.length;j++){
     x[j].style.visibility="hidden";
     
 }
-clickCounter=0;
+clickCounter=0; 
 flag=false;
-document.querySelector(".winner").innerHTML="";
+document.querySelector(".winner").innerHTML=""; //!empty the winner message
 })
