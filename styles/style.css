@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cursive;
+    font-size:20px;
+}
+
+img{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    color:rgb(172, 203, 156);
+    
+}
+body{
+    background-image: url(/img/eugene-golovesov-dLWq0wDDkNI-unsplash.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    
+}
+
+.game-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+.container{
+    display: flex;
+    
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.box{
+    background-color:rgb(172, 203, 156);
+    width:170px;
+    height: 170px;
+    border: 1px black solid;
+    position: relative;
+    opacity: 0.9;
+}
+.x{
+    position: relative;
+    visibility: hidden;
+    
+}
+.o{
+    position: absolute;
+    top:0;
+    left:0;
+    visibility: hidden;
+}
+footer{
+    color: white;
+}
+
+.score{
+    display: flex;
+}
+
+.btn{
+    padding:15px;
+    margin: 20px;
+    border:1px white solid;
+    text-align: center;
+    background-color: rgb(37, 60, 37);
+    opacity: 0.95;
+}
+
+.btn:hover{
+    background-color: rgb(172, 203, 156);
+    opacity: 0.9;
+    color:black;
+    cursor: pointer;
+}
+
+.player{
+    width: 10vw;
+    padding: 15px;
+    text-align: center; 
+    height:12vh;
+    border:1px white solid;
+    background-color: rgb(37, 60, 37)
+
+}
+
+.score1{
+    padding: 15px;
+    
+}
+
+.score2{
+    padding: 15px;
+    
+}
+
+.winner{
+    text-align: center;
+}
+
+
