@@ -1,4 +1,6 @@
 <h1>Tic Tac Toe Game in React</h1>
+<img src="tic%20tac%20toe.png" alt="tic_tac_toe_image" height="700px">
+
 <p>This project is a simple implementation of the classic Tic Tac Toe game using React. The game allows two players to play against each other on a 3x3 board with a fun twist - the "X" symbol is represented by a cat and the "O" symbol is represented by a dog!</p>
 <h2>Demo</h2>
 <p>You can play the game without installing anything by visiting the <a href="https://tic-tac-toe-miri.netlify.app/">live demo</a>.</p>
